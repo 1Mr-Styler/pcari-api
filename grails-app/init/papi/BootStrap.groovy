@@ -19,10 +19,16 @@ class BootStrap {
         User admin = new User(names: "Rose Clevel", username: "rose221", password: "pass", role: Role.Admin)
         User dealer1 = new User(names: "Utama Motors", username: "rose222", password: "pass",
                 role: Role.Dealer, location: "Kuala Lumpur", avatar: "images/cooper.jpg")
+
         User dealer2 = new User(names: "Moscorp Sdn Bhd", username: "rose223", password: "pass",
                 role: Role.Dealer, location: "Shah Alam", avatar: "images/cooper.jpg")
 
-        [admin, dealer1, dealer2].each { user ->
+        User dealer3 = new User(names: "Apex Wheel Sdn Bhd", username: "rose224", password: "pass",
+                role: Role.Dealer, location: "Shah Alam", avatar: "images/aw.jpg")
+        User dealer4 = new User(names: "Trinity Car Autos", username: "rose225", password: "pass",
+                role: Role.Dealer, location: "Kuala Lumpur", avatar: "images/ta.jpg")
+
+        [admin, dealer1, dealer2, dealer3, dealer4].each { user ->
             user.save(flush: true)
         }
 
